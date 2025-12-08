@@ -263,19 +263,21 @@ curl -X POST "http://127.0.0.1:8000/quality-from-csv" \
 ```json
 {
   "flags": {
-    "too_few_rows": false,
-    "too_many_missing": true,
-    "has_constant_columns": true,
-    "constant_columns_count": 2,
-    "constant_columns": ["id", "source"],
-    "has_high_cardinality_categoricals": true,
-    "high_cardinality_columns_count": 1,
-    "high_cardinality_columns": ["session_id"],
-    "max_missing_share": 0.73,
-    "quality_score": 0.42,
-    ...
+    "too_few_rows": true,
+    "too_many_columns": false,
+    "max_missing_share": 0.05555555555555555,
+    "too_many_missing": false,
+    "has_constant_columns": false,
+    "constant_columns_count": 0,
+    "constant_columns": [],
+    "has_high_cardinality_categoricals": false,
+    "high_cardinality_columns_count": 0,
+    "high_cardinality_columns": [],
+    "high_cardinality_threshold_share": 0.5,
+    "quality_score": 0.744
   }
 }
+```
 
 ---
 
