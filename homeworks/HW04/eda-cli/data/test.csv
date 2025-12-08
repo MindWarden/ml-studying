@@ -1,0 +1,8 @@
+user_id,name,age,city,status,const_col,almost_zeros,high_card_id
+1,Anna,25,Moscow,active,X,0,1001
+2,Bob,30,SPb,active,X,0,1002
+3,Anna,25,Moscow,active,X,0,1003
+4,Charlie,35,Kazan,inactive,X,0,1004
+5,David,40,Novosibirsk,active,X,5,1005
+6,Eve,28,Ekaterinburg,active,X,0,1006
+7,Frank,45,Novosibirsk,banned,X,0,1007
