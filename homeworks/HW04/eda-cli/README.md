@@ -259,7 +259,7 @@ curl -X POST "http://127.0.0.1:8000/quality-from-csv" \
 **Параметры**  
 - `file` — файл в формате `.csv` (загружается как `multipart/form-data`)
 
-**Ответ** (пример)
+**Ответ JSON** (пример)
 ```json
 {
   "flags": {
