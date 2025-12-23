@@ -1,0 +1,27 @@
+{
+    "Dummy (most_frequent)":{
+        "Accuracy":0.6767,
+        "F1":0.0,
+        "ROC-AUC":0.5
+    },
+    "LogisticRegression":{
+        "Accuracy":0.8275,
+        "F1":0.7076,
+        "ROC-AUC":0.8747
+    },
+    "DecisionTree":{
+        "Accuracy":0.8692,
+        "F1":0.7942,
+        "ROC-AUC":0.9098
+    },
+    "RandomForest":{
+        "Accuracy":0.9292,
+        "F1":0.8854,
+        "ROC-AUC":0.9673
+    },
+    "GradientBoosting":{
+        "Accuracy":0.9292,
+        "F1":0.8868,
+        "ROC-AUC":0.9689
+    }
+}
