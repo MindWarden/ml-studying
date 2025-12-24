@@ -1,0 +1,24 @@
+{
+    "dataset_01": {
+        "best_method": "KMeans",
+        "parameters": {
+            "k": 2
+        },
+        "reason": "Выше silhouette_score + высокая устойчивость"
+    },
+    "dataset_02": {
+        "best_method": "DBSCAN",
+        "parameters": {
+            "eps": 0.1,
+            "min_samples": 10
+        },
+        "reason": "Лучше отражает структуру данных (нелинейность/выбросы)"
+    },
+    "dataset_04": {
+        "best_method": "KMeans",
+        "parameters": {
+            "k": 5
+        },
+        "reason": "Выше silhouette_score"
+    }
+}
