@@ -1,10 +1,14 @@
 {
     "DecisionTree": {
         "best_params": {
+            "ccp_alpha": 0.0,
             "max_depth": null,
-            "min_samples_leaf": 20
+            "max_leaf_nodes": null,
+            "min_impurity_decrease": 0.0,
+            "min_samples_leaf": 20,
+            "min_samples_split": 2
         },
-        "best_cv_score_roc_auc": 0.9183
+        "best_cv_score_roc_auc": 0.9154
     },
     "RandomForest": {
         "best_params": {
