@@ -1,0 +1,9 @@
+{
+    "model_arch": "ExperimentalMLP(hidden_dims=[256, 128, 64], use_bn=True, dropout_p=0.3)",
+    "optimizer": "Adam",
+    "lr": 0.001,
+    "epochs_trained": 7,
+    "best_val_accuracy": 0.9785,
+    "early_stopping_patience": 3,
+    "seed": 42
+}
