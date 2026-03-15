@@ -1,4 +1,5 @@
 {
+    "dataset": "KMNIST",
     "model_arch": "ExperimentalMLP(hidden_dims=[256, 128, 64], use_bn=True, dropout_p=0.3)",
     "optimizer": "Adam",
     "lr": 0.001,

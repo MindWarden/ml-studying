@@ -37,7 +37,7 @@
 - E3 (BatchNorm): Базовая архитектура + BatchNorm1d после ReLU.
 - E4 (EarlyStopping): BatchNorm + остановка обучения при прекращении роста val_accuracy.
 
-## 6. Часть B (S09): оптимизация (O1-O3)
+## 6. Часть B (S09): LR, оптимизаторы, weight decay (O1-O3)
 
 - O1: Adam, lr=1e-1 (слишком большой).
 - O2: Adam, lr=1e-5 (слишком маленький).
