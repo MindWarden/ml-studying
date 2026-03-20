@@ -1,0 +1,5 @@
+experiment_id,task,dataset,seed,split_summary,model_summary,best_val_mae,best_val_rmse,best_val_mape,test_mae,test_rmse,test_mape,window_size,features_summary,lr,epochs_trained
+B1,forecasting,S12-hw-dataset.csv,42,70/15/15,Naive-last,6.444814814814815,8.20102295260389,0.0439792166354992,,,,,target_t-1,,
+B2,forecasting,S12-hw-dataset.csv,42,70/15/15,Moving-average,12.702012786596118,15.217644526713752,0.08816864030936068,,,,7.0,Rolling mean,,
+B3,forecasting,S12-hw-dataset.csv,42,70/15/15,Ridge,6.73610440858999,8.236683895021663,0.045131564509569615,,,,,Lags+Rolling+Calendar,,
+R1,forecasting,S12-hw-dataset.csv,42,70/15/15,GRU,4.496078968048096,5.933233716035596,0.030282940715551376,5.075151443481445,6.532359635852069,0.032549917697906494,24.0,,0.001,24.0
