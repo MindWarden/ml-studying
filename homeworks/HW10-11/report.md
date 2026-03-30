@@ -78,6 +78,7 @@
 - Сравнение C1-C4: `./artifacts/figures/classification_compare.png`
 - Визуализация аугментаций: `./artifacts/figures/augmentations_preview.png`
 - Визуализации второй части: `./artifacts/figures/segmentation_examples.png`
+- Метрики сегментации (V1 vs V2): `./artifacts/figures/segmentation_metrics.png`
 
 Короткая сводка:
 
