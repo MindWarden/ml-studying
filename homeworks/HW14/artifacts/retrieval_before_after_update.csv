@@ -1,0 +1,6 @@
+query,before_retrieved_sources,after_retrieved_sources,changed
+Гейзеры и океан на спутнике Сатурна,"doc_06, doc_17, doc_14, doc_08","doc_21, doc_06, doc_17, doc_14",True
+Карликовая планета в поясе астероидов,"doc_11, doc_17, doc_12","doc_11, doc_22, doc_17, doc_12",True
+Самый далёкий космический аппарат,"doc_19, doc_08","doc_19, doc_23, doc_22, doc_08",True
+Поиск жизни на спутниках,"doc_14, doc_04, doc_07, doc_19, doc_09","doc_14, doc_21, doc_04, doc_07, doc_23",True
+Кто пролетел мимо Урана,"doc_07, doc_08, doc_12","doc_23, doc_07, doc_08, doc_22",True
