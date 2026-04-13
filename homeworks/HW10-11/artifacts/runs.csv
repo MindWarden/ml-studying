@@ -1,7 +1,7 @@
-experiment_id, task          , dataset      , seed, model_summary, optimizer       , lr   , epochs_trained, best_val_accuracy, test_accuracy, precision, recall, mean_iou, notes
-C1           , classification, STL10        ,   42, SimpleCNN    , Adam            , 0.001,              5,             0.502,              ,          ,       ,         , "Base CNN, no augmentations"
-C2           , classification, STL10        ,   42, SimpleCNN    , Adam            , 0.001,              5,             0.464,              ,          ,       ,         , Simple CNN with augmentations
-C3           , classification, STL10        ,   42, ResNet18     , Adam            , 0.001,              5,             0.953,              ,          ,       ,         , "ResNet18, head-only"
-C4           , classification, STL10        ,   42, ResNet18     , Adam            , 0.001,              5,             0.961,      0.952125,          ,       ,         , "ResNet18, layer4 + fc fine-tuning"
-V1           , segmentation  , OxfordIIITPet,   42, ResNet18     , N/A (Pretrained),      ,              0,                  ,              ,          ,       ,   0.0006, DeepLabV3 segmentation with threshold mode V1
-V2           , segmentation  , OxfordIIITPet,   42, ResNet18     , N/A (Pretrained),      ,              0,                  ,              ,          ,       ,   0.0021, DeepLabV3 segmentation with threshold mode V2
+experiment_id,task,dataset,seed,model_summary,optimizer,lr,epochs_trained,best_val_accuracy,test_accuracy,precision,recall,mean_iou,notes
+C1,classification,CIFAR-100,42,SimpleCNN,Adam,0.001,10,0.2892,,,,,"SimpleCNN, no augmentation"
+C2,classification,CIFAR-100,42,SimpleCNN,Adam,0.001,10,0.2564,,,,,SimpleCNN + augmentations
+C3,classification,CIFAR-100,42,ResNet18 head-only,Adam,0.001,5,0.5152,,,,,"ResNet18 pretrained, backbone frozen"
+C4,classification,CIFAR-100,42,ResNet18 layer4+fc,Adam,0.0001,5,0.6476,0.6315,,,,"ResNet18 pretrained, partial fine-tune"
+V1,segmentation,VOC,42,DeepLabV3_ResNet50,,,,,,0.930586,0.797253,0.742746,"Базовая постобработка, fg=person"
+V2,segmentation,VOC,42,DeepLabV3_ResNet50,,,,,,0.933341,0.788783,0.736509,"Морфологическая очистка (opening 7x7), fg=person"
