@@ -1,0 +1,6 @@
+error_type,zero_shot,few_shot_k4,lora,comment
+bug_vs_question,1,0,0,"zero-shot путает технический bug с вопросом, когда формулировка нейтральна"
+feature_vs_question,1,1,0,"граница feature/question размыта: 'нужна поддержка' читается как вопрос"
+praise_vs_feature,0,1,1,"короткая praise без явных маркеров иногда парсится как feature"
+format_violation,1,0,0,"zero-shot добавляет лишний текст, ответ не парсится"
+question_vs_bug,1,0,0,"вопрос про смену email модель без контекста читает как отчёт об ошибке"

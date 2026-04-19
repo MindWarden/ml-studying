@@ -1,0 +1,4 @@
+mode,accuracy,macro_f1,parse_rate,correct,total
+zero_shot,0.750,0.736,0.950,15,20
+few_shot_k4,0.900,0.898,1.000,18,20
+lora,0.950,0.949,1.000,19,20
