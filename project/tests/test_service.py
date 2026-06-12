@@ -1,4 +1,7 @@
 """End-to-end checks for the FastAPI service."""
+import json
+from pathlib import Path
+
 from fastapi.testclient import TestClient
 
 from src.service.app import app
@@ -78,3 +81,14 @@ def test_predict_validation_error_on_bad_input():
         bad = {**LOYAL_CUSTOMER, "Contract": "InvalidValue"}
         r = client.post("/predict", json=bad)
         assert r.status_code == 422
+
+
+def test_tuned_threshold_artifact_is_valid_and_used():
+    thr_path = Path(__file__).resolve().parents[1] / "artifacts" / "threshold.json"
+    assert thr_path.exists(), "Run `python -m src.models.train` to create threshold.json"
+    tuned = json.loads(thr_path.read_text())["threshold"]
+    assert 0.0 < tuned < 1.0
+
+    with TestClient(app) as client:
+        body = client.post("/predict", json=LOYAL_CUSTOMER).json()
+        assert body["threshold"] == tuned

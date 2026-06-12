@@ -45,6 +45,10 @@ artifacts/*.onnx
 artifacts/metrics_*.json
 artifacts/figures/
 
+# MLflow local tracking
+mlruns/
+mlflow.db
+
 # Logs
 *.log
 logs/

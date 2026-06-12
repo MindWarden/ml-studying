@@ -1,6 +1,7 @@
 """FastAPI service for the Churn prediction model."""
 from __future__ import annotations
 
+import json
 import logging
 import os
 from contextlib import asynccontextmanager
@@ -20,7 +21,19 @@ log = logging.getLogger("churn-service")
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 MODEL_PATH = Path(os.getenv("MODEL_PATH", PROJECT_ROOT / "artifacts" / "model.pkl"))
-THRESHOLD = float(os.getenv("CHURN_THRESHOLD", "0.5"))
+THRESHOLD_PATH = PROJECT_ROOT / "artifacts" / "threshold.json"
+
+
+def _default_threshold() -> float:
+    """CHURN_THRESHOLD env wins; otherwise the threshold tuned during training."""
+    if env_value := os.getenv("CHURN_THRESHOLD"):
+        return float(env_value)
+    if THRESHOLD_PATH.exists():
+        return float(json.loads(THRESHOLD_PATH.read_text())["threshold"])
+    return 0.5
+
+
+THRESHOLD = _default_threshold()
 
 _model = None
 

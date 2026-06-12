@@ -10,6 +10,8 @@ pydantic>=2.7,<3.0
 python-dotenv>=1.0
 pyyaml>=6.0
 
+mlflow-skinny>=2.14
+
 matplotlib>=3.8
 seaborn>=0.13
 

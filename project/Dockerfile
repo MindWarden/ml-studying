@@ -15,8 +15,10 @@ COPY configs/ ./configs/
 COPY data/ ./data/
 COPY artifacts/ ./artifacts/
 
-# Если model.pkl не приехал в образе — обучим прямо в build (фоллбэк)
-RUN test -f artifacts/model.pkl || python -m src.models.train
+# Модель всегда обучается внутри образа: pickle гарантированно совместим
+# с версиями библиотек контейнера (seed зафиксирован — результат детерминирован);
+# MLflow-трекинг в build не нужен
+RUN DISABLE_MLFLOW=1 python -m src.models.train
 
 ENV APP_HOST=0.0.0.0 \
     APP_PORT=8000 \
